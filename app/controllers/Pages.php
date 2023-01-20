@@ -6,7 +6,7 @@
     
     public function index(){
       $data = [
-        'title' => 'glowguru',
+        'title' => 'glowguruback',
       ];
      
       $this->view('pages/index', $data);
@@ -34,4 +34,14 @@
       
       $this->view('pages/dashboard', $data);
     }
+  public function itemform()
+  {
+    $data = [
+      'title' => 'itemform',
+    ];
+
+    $this->view('inc/itemform', $data);
+  }
+
+    
   }
