@@ -1,0 +1,21 @@
+<?php
+    class Login {
+        private $db;
+        public function __construct(){
+            $this->db = new Database;
+        }
+        public function checkAdmin($data){
+            $this->db->query("SELECT * FROM admin WHERE login = :email AND password = :password");
+            $this->db->bind(':email', $data['email']);
+            $this->db->bind(':password' , $data['password']);
+
+            $row = $this->db->resultSet();
+            
+            if($this->db->rowCount() > 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+    }
