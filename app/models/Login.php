@@ -5,7 +5,7 @@
             $this->db = new Database;
         }
         public function checkAdmin($data){
-            $this->db->query("SELECT * FROM admin WHERE login = :email AND password = :password");
+            $this->db->query("SELECT * FROM admin WHERE email = :email AND password = :password");
             $this->db->bind(':email', $data['email']);
             $this->db->bind(':password' , $data['password']);
 
