@@ -39,7 +39,7 @@
                     <a href="<?= URLROOT; ?>/pages/product">Products</a>
                 </div>
                 <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
-                    Blog
+                    <a href=" <?= URLROOT; ?>/pages/blog"> Blog</a>
                 </div>
             </div>
             <div class="bg-white  p-2 rounded-full">
