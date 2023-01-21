@@ -51,12 +51,12 @@
         }
     }
     // search function
-    public function Search($name){
-        $this->db->query("SELECT * FROM product WHERE name LIKE :name");
-        $this->db->bind(':name','%'.$name.'%');
-        $results = $this->db->resultSet();
-        return $results;
-    }
+    // public function Search($name){
+    //     $this->db->query("SELECT * FROM product WHERE name LIKE :name");
+    //     $this->db->bind(':name','%'.$name.'%');
+    //     $results = $this->db->resultSet();
+    //     return $results;
+    // }
 
  }
 

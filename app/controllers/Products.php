@@ -42,7 +42,7 @@
                 }
                 if(empty($data['name_err']) && empty($data['image_err']) && empty($data['price_err']) && empty($data['quantity_err']) && empty($data['description_err'])){
                     if($this->productmodels->Add($data)){
-                        redirect('pages/dashboard');
+                        redirect('Products/dashboard');
                     }
                     else{
                         die('Something went wrong');
@@ -100,6 +100,20 @@
                     $data['description_err']='Please enter description';
                 }
 
+            }
+        }
+        public function delete($id){
+            if($_SERVER['REQUEST_METHOD']=='GET'){
+               
+                if($this->productmodels->Delete($id)){
+                    redirect('Products/dashboard');
+                }
+                else{
+                    die('Something went wrong');
+                }
+            }
+            else{
+                redirect('Products/dashboard');
             }
         }
     }   
