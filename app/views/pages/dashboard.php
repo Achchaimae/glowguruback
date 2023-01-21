@@ -1,4 +1,3 @@
-<!-- component -->
 <!DOCTYPE html>
 <html x-data="data()" lang="en">
 
@@ -36,9 +35,9 @@
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <div class="">
+                        <div>
                             <!-- admin img -->
-                            <img class="hidden h-24 w-24 rounded-full sm:block object-cover mr-2 border-4 text-cyan-700" src="<?= URLROOT; ?>/img/logo.png" alt="">
+                            <img class="hidden  border-green-500 h-24 w-24 rounded-full sm:block object-cover mr-2 border-4 text-cyan-700" src="<?= URLROOT; ?>/img/profile.png" alt="">
                             <!-- show name admin from db -->
                             <!-- admin name -->
                             <p class="font-bold text-base  text-gray-400 pt-2 text-center w-24"><?php echo $_SESSION['admin']; ?></p>
@@ -267,9 +266,9 @@
                                             </div>
                                             <div class="ml-2 w-full flex-1">
                                                 <div>
-                                                    <div class="mt-3 text-3xl font-bold leading-8">4.510</div>
+                                                    <div class="mt-3 text-3xl font-bold leading-8"><?php echo count($data['products']) ?></div>
 
-                                                    <div class="mt-1 text-base text-gray-600">Item Sales</div>
+                                                    <div class="mt-1 text-base text-gray-600">Item in stock</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -358,7 +357,7 @@
                                                                         </th>
                                                                         <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                                                             <div class="flex cursor-pointer">
-                                                                                <span class="mr-2">STATUS</span>
+                                                                                <span class="mr-2">PRICE</span>
                                                                             </div>
                                                                         </th>
                                                                         <th class="px-6 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
@@ -368,22 +367,24 @@
                                                                         </th>
                                                                     </tr>
                                                                 </thead>
+                                                                <!-- component -->
+                                                                <?php 
+
+                                                                // print_r($data['products']);
+                                                                foreach($data['products'] as $product): ?>
                                                                 <tbody class="bg-white divide-y divide-gray-200">
                                                                     <tr>
                                                                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5">
-                                                                            <p>Mascara</p>
+                                                                            <p><?php echo $product->name; ?></p>
                                                                             <p class="text-xs text-gray-400">sephora
                                                                             </p>
                                                                         </td>
                                                                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5">
-                                                                            <p>77</p>
+                                                                            <p><?php echo $product->quantity; ?></p>
                                                                         </td>
                                                                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5">
                                                                             <div class="flex text-green-500">
-                                                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                                                </svg>
-                                                                                <p>Active</p>
+                                                                                <p><?php echo $product->quantity; ?></p>
                                                                             </div>
                                                                         </td>
                                                                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5">
@@ -405,6 +406,8 @@
                                                                     </tr>
 
                                                                 </tbody>
+                                                            <?php endforeach;
+                                                                ?>
                                                             </table>
                                                         </div>
                                                     </div>
