@@ -379,7 +379,7 @@
                     </div>
 
                     <p class="text-xs text-gray-500">
-                        &copy; 2022. Company Name. All rights reserved.
+                        &copy; 2023. Achchaimae Khalaf. All rights reserved.
                     </p>
                 </div>
             </footer>
