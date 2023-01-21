@@ -28,29 +28,20 @@
     <!-- <div class="flex justify-center items-center w-screen h-screen bg-white"> -->
     <!-- COMPONENT CODE -->
 
-    <div class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl m-auto my-4 bg-white">
-        <div class="flex">
-            <h1 class="font-bold uppercase text-5xl">Send us a <br /> message</h1>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
-            <!-- component -->
-            <!-- This is an example component -->
-
-            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
-
-            <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.3.x/dist/index.js"></script>
-
-
-            <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
+    
+    </div>
+    <form action="<?php echo URLROOT ;?>/Products/add" method="POST"  class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl m-auto my-4 bg-white">
+        
+    <div >
+    <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
                 <!-- Photo File Input -->
-                <input type="file" class="hidden" x-ref="photo" x-on:change="
+                <input type="file" name="image" class="hidden" x-ref="photo" x-on:change="
                         photoName = $refs.photo.files[0].name;
                         const reader = new FileReader();
                         reader.onload = (e) => {
                             photoPreview = e.target.result;
                         };
-                        reader.readAsDataURL($refs.photo.files[0]);
-    ">
+                        reader.readAsDataURL($refs.photo.files[0]);">
 
                 <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="photo">
                     Product Photo <span class="text-red-600"> </span>
@@ -71,13 +62,24 @@
                     </button>
                 </div>
             </div>
-            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder="Name*" />
-            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" placeholder="quantiy*" />
+   
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+            <!-- component -->
+            <!-- This is an example component -->
+
+            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+            <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.3.x/dist/index.js"></script>
+
+
+            
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" name="name" placeholder="Name*" />
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" name="quantity" placeholder="quantiy*" />
             <!-- <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="file" placeholder="image *" /> -->
-            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" placeholder="price *" />
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" name="price" placeholder="price *" />
         </div>
         <div class="my-4">
-            <textarea placeholder="description ..." class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+            <textarea placeholder="description ..." name="description" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
         </div>
         <div class="my-2 w-1/2 lg:w-1/4 mx-auto">
             <button class="uppercase text-sm font-bold tracking-wide bg-cyan-700  hover:bg-cyan-800 text-gray-100 p-3 rounded-lg w-full 
@@ -87,11 +89,7 @@
         </div>
 
     </div>
-
-
-
-    <!-- COMPONENT CODE -->
-    </div>
+    </form>
 </body>
 
 </html>
