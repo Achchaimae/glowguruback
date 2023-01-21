@@ -40,6 +40,14 @@
 
     $this->view('inc/itemform', $data);
   }
+  public function blog()
+  {
+    $data = [
+      'title' => 'blog',
+    ];
+
+    $this->view('pages/blog', $data);
+  }
 
     
   }
