@@ -7,13 +7,14 @@ class Autho extends Controller{
     }
     public function login(){
         if($_SERVER['REQUEST_METHOD']=='POST'){
+            $check = $this->loginmodels->checkadmin();
             $data=[
                 'email' => $_POST['email'],
                 'password' => $_POST['password'],
                 'email_err' => '',
             ];
-            if($this->loginmodels->checkadmin($data)){
-                $this->createSession($data['email']);
+            if($check->email == $data['email'] && $check->password == $data['password']){
+                $this->createSession($check);
             }
             else{
                 $data['email_err']='Invalid email or password';
@@ -24,6 +25,7 @@ class Autho extends Controller{
         else {
             // Load form (page page before the submit)
             $data=[
+                'name' => '',
                 'email' => '',
                 'password' => '',
                 'email_err' => ''
@@ -33,8 +35,9 @@ class Autho extends Controller{
     }
     
     public function createSession($adm){
-        $_SESSION['admin'] = $adm;
-        redirect('pages/dashboard');
+        $_SESSION['admin'] = $adm->name;
+        $_SESSION['profile'] = $adm->image;
+        redirect('products/dashboard');
     }
     
     public function logout(){
