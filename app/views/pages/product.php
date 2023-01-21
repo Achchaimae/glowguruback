@@ -29,7 +29,7 @@
     </div>
     <div class="bg-white flex flex-row w-fit px-4  py-2 justify-between rounded-3xl gap-4 text-center">
       <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl text-">
-        <a href="<?= URLROOT ?>/pages/index">Home</a>
+        <a href="<?= URLROOT; ?>/pages/index">Home</a>
       </div>
       <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
         About
@@ -38,7 +38,9 @@
         <a href="">Products</a>
       </div>
       <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
-        Blog
+        <a href="<?= URLROOT ; ?>/pages/blog">
+          Blog
+        </a>
       </div>
     </div>
     <div class="bg-white  p-2 rounded-full">
@@ -75,106 +77,6 @@
         </div>
       </div>
     <?php endforeach; ?>
-    <!-- new product -->
-    <!-- <div class="flex w-72 h-72">
-      <div class="container mx-auto p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-        <img class="rounded-xl" src="https://images.unsplash.com/photo-1547517023-7ca0c162f816" alt="" />
-        <div class="flex justify-between items-center">
-          <div>
-            <h1 class="mt-5 text-2xl font-semibold">Aloe Cactus</h1>
-            <p class="mt-2">$11.99</p>
-          </div>
-          <div>
-            <button class="text-white  font-semibold bg-cyan-700 py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110 ">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="flex w-72 h-72">
-      <div class="container mx-auto p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-        <img class="rounded-xl" src="https://images.unsplash.com/photo-1547517023-7ca0c162f816" alt="" />
-        <div class="flex justify-between items-center">
-          <div>
-            <h1 class="mt-5 text-2xl font-semibold">Aloe Cactus</h1>
-            <p class="mt-2">$11.99</p>
-          </div>
-          <div>
-            <button class="text-white  font-semibold bg-cyan-700 py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110 ">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="flex w-72 h-72">
-      <div class="container mx-auto p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-        <img class="rounded-xl" src="https://images.unsplash.com/photo-1547517023-7ca0c162f816" alt="" />
-        <div class="flex justify-between items-center">
-          <div>
-            <h1 class="mt-5 text-2xl font-semibold">Aloe Cactus</h1>
-            <p class="mt-2">$11.99</p>
-          </div>
-          <div>
-            <button class="text-white  font-semibold bg-cyan-700 py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110 ">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- new product -->
-    <!-- <div class="flex w-72 h-72">
-      <div class="container mx-auto p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-        <img class="rounded-xl" src="https://images.unsplash.com/photo-1547517023-7ca0c162f816" alt="" />
-        <div class="flex justify-between items-center">
-          <div>
-            <h1 class="mt-5 text-2xl font-semibold">Aloe Cactus</h1>
-            <p class="mt-2">$11.99</p>
-          </div>
-          <div>
-            <button class="text-white  font-semibold bg-cyan-700 py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110 ">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="flex w-72 h-72">
-      <div class="container mx-auto p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-        <img class="rounded-xl" src="https://images.unsplash.com/photo-1547517023-7ca0c162f816" alt="" />
-        <div class="flex justify-between items-center">
-          <div>
-            <h1 class="mt-5 text-2xl font-semibold">Aloe Cactus</h1>
-            <p class="mt-2">$11.99</p>
-          </div>
-          <div>
-            <button class="text-white  font-semibold bg-cyan-700 py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110 ">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="flex w-72 h-72">
-      <div class="container mx-auto p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-        <img class="rounded-xl" src="https://images.unsplash.com/photo-1547517023-7ca0c162f816" alt="" />
-        <div class="flex justify-between items-center">
-          <div>
-            <h1 class="mt-5 text-2xl font-semibold">Aloe Cactus</h1>
-            <p class="mt-2">$11.99</p>
-          </div>
-          <div>
-            <button class="text-white  font-semibold bg-cyan-700 py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110 ">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="flex w-72 h-72">
-      <div class="container mx-auto p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-        <img class="rounded-xl" src="https://images.unsplash.com/photo-1547517023-7ca0c162f816" alt="" />
-        <div class="flex justify-between items-center">
-          <div>
-            <h1 class="mt-5 text-2xl font-semibold">Aloe Cactus</h1>
-            <p class="mt-2">$11.99</p>
-          </div>
-          <div>
-            <button class="text-white  font-semibold bg-cyan-700 py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110 ">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </section>
   <section class="mt-4">
     <footer aria-label="Site Footer" class="bg-white">
