@@ -28,7 +28,7 @@
         <button class="bg-cyan-700 p-3 rounded text-white font-bold">Add more </button>
     </div>
     <section class="flex justify-center">
-        <form action=" <?php echo URLROOT; ?>/Products/add" method="POST" class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl m-auto my-4 bg-white">
+        <form action=" <?php echo URLROOT; ?>/Products/add" method="POST" class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl m-auto my-4 bg-white" enctype="multipart/form-data">
 
             <div>
                 <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
@@ -40,6 +40,7 @@
                             photoPreview = e.target.result;
                         };
                         reader.readAsDataURL($refs.photo.files[0]);">
+                      
 
                     <label class="block text-gray-700 text-lg font-bold mb-2 text-center" for="photo">
                         Product Photo <span class="text-red-600"> </span>
@@ -59,6 +60,7 @@
                             Select New Photo
                         </button>
                     </div>
+                    <span class="flex justify-center text-red-500" ><?php echo $data['image_err']?></span>
                 </div>
 
                 <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
@@ -70,14 +72,23 @@
                     <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.3.x/dist/index.js"></script>
 
 
-
-                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" name="name" placeholder="Name*" />
-                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" name="quantity" placeholder="quantiy*" />
+                    <div>
+                        <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" name="name" placeholder="Name*" />
+                        <span class="flex justify-center text-red-500" ><?php echo $data['name_err']?></span>
+                    </div>
+                    <div>
+                        <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" name="quantity" placeholder="quantiy*" />
+                        <span class="flex justify-center text-red-500" ><?php echo $data['quantity_err']?></span>
+                    </div>
                     <!-- <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="file" placeholder="image *" /> -->
-                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" name="price" placeholder="price *" />
+                   <div>
+                        <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" name="price" placeholder="price *" />
+                        <span class="flex justify-center text-red-500" ><?php echo $data['price_err']?></span>
+                    </div>
                 </div>
                 <div class="my-4">
                     <textarea placeholder="description ..." name="description" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                    <span class="flex justify-center text-red-500" ><?php echo $data['description_err']?></span>
                 </div>
                 <div class="my-2 w-1/2 lg:w-1/4 mx-auto">
                     <button class="uppercase text-sm font-bold tracking-wide bg-cyan-700  hover:bg-cyan-800 text-gray-100 p-3 rounded-lg w-full 
