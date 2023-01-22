@@ -64,7 +64,10 @@
     <?php foreach ($data['products'] as $product) : ?>
       <div class="flex w-72 h-72">
         <div class="container mx-auto  p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="h-44">
+          
           <img class="rounded-xl w-full h-44 "src="<?= URLROOT . '/img/upload/' . $product->image; ?>" alt="" />
+        </div>  
           <div class="flex justify-between items-center">
             <div>
               <h1 class="mt-5 text-xl font-semibold"><?php echo $product->name; ?></h1>

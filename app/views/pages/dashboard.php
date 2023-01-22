@@ -1,3 +1,12 @@
+<?php 
+    if($_SESSION['user_id']==$){
+        header('Location: '.URLROOT.'/Products/dashboard');
+    }
+    else{
+        header('Location: '.URLROOT.'/pages/login');
+    }
+?>
+<!-- on test page -->
 <!DOCTYPE html>
 <html x-data="data()" lang="en">
 
