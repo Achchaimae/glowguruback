@@ -10,6 +10,12 @@
         $results = $this->db->resultSet();
         return $results;
     }
+    public function Get($id){
+        $this->db->query("SELECT * FROM product WHERE id=:id");
+        $this->db->bind(':id',$id);
+        $row = $this->db->single();
+        return $row;
+    }
     // crud
     public function Add($data){
         $this->db->query("INSERT INTO product (name,image,price,quantity,description) VALUES (:name,:image,:price,:quantity,:description)");
