@@ -1,3 +1,9 @@
+<?php 
+   if(isLoggedIn()){
+       redirect('Products/Dashboard');
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

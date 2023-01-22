@@ -1,10 +1,7 @@
 <?php 
-    if($_SESSION['user_id']==$){
-        header('Location: '.URLROOT.'/Products/dashboard');
-    }
-    else{
-        header('Location: '.URLROOT.'/pages/login');
-    }
+   if(!isLoggedIn()){
+       redirect('Autho/login');
+   }
 ?>
 <!-- on test page -->
 <!DOCTYPE html>
