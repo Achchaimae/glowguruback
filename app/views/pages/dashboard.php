@@ -87,7 +87,7 @@
                                             <div class="px-1 hover:text-gray-800 hover:bg-gray-100 rounded-md">
                                                 <div class="flex items-center">
                                                     <i class="fa-regular fa-circle-plus"></i>
-                                                    <a class="w-full ml-2  text-sm font-semibold text-white hover:text-gray-800  text-center" href="<?= URLROOT; ?>/inc/itemform">New item</a>
+                                                    <a class="w-full ml-2  text-sm font-semibold text-white hover:text-gray-800  text-center" href="<?= URLROOT; ?>/Products/add">New item</a>
                                                 </div>
                                             </div>
                                         </li>
