@@ -63,8 +63,8 @@
   <section class="grid grid-cols-4 gap-4 mt-6 place-items-center my-4">
     <?php foreach ($data['products'] as $product) : ?>
       <div class="flex w-72 h-72">
-        <div class="container mx-auto p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-          <img class="rounded-xl" src="https://images.unsplash.com/photo-1547517023-7ca0c162f816" alt="" />
+        <div class="container mx-auto  p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
+          <img class="rounded-xl w-full h-44 "src="<?= URLROOT . '/img/upload/' . $product->image; ?>" alt="" />
           <div class="flex justify-between items-center">
             <div>
               <h1 class="mt-5 text-xl font-semibold"><?php echo $product->name; ?></h1>
