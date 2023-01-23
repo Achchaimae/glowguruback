@@ -10,7 +10,7 @@ class Autho extends Controller{
             $check = $this->loginmodels->checkadmin();
             $data=[
                 'email' => $_POST['email'],
-                'password' => $_POST['password'],
+                'password' => md5($_POST['password'])   ,
                 'email_err' => '',
             ];
             if($check->email == $data['email'] && $check->password == $data['password']){
