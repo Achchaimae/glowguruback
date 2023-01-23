@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <!-- linking tailwind css -->
-  <link href="<?php echo URLROOT; ?>./dist/output.css" rel="stylesheet">
+  <link href="<?php echo URLROOT; ?>/dist/output.css" rel="stylesheet">
   <!-- link awsome font -->
   <script src="https://kit.fontawesome.com/93e0a23dda.js" crossorigin="anonymous"></script>
   <title>product</title>
@@ -52,17 +52,17 @@
   <section class="mx-auto my-4 translate-x-[10%] overflow-hidden">
     <!-- search bar -->
     <div class="relative text-gray-600">
-      <input type="search" name="serch" placeholder="Search" class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none w-[80%]">
-      <button type="submit" class="relative right-12 top-0 mt-3 mr-4  ">
+      <input type="search" name="search" placeholder="Search" data-search id="search" class=" bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none w-[80%]">
+      <button type="submit" class="relative right-12 top-0 mt-3 mr-4  " >
         <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
           <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
         </svg>
       </button>
     </div>
   </section>
-  <section class="grid grid-cols-4 gap-4 mt-6 place-items-center my-4">
+  <section class="flex flex-row justify-center gap-4 mt-6 place-items-center my-4 flex-wrap">
     <?php foreach ($data['products'] as $product) : ?>
-      <div class="flex w-72 h-72">
+      <div class="Names flex w-72 h-72">
         <div class="container mx-auto  p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
         <div class="h-44">
           
@@ -70,7 +70,7 @@
         </div>  
           <div class="flex justify-between items-center">
             <div>
-              <h1 class="mt-5 text-xl font-semibold"><?php echo $product->name; ?></h1>
+              <h1 class=" PNames mt-5 text-xl font-semibold"><?php echo $product->name; ?></h1>
               <p class="mt-2"> $ <?php echo $product->price; ?></p>
             </div>
             <div>
@@ -80,6 +80,7 @@
         </div>
       </div>
     <?php endforeach; ?>
+    <div id="noitem" class="text-red-500 text-xl hidden">no items found</div>
   </section>
   <section class="mt-4">
     <footer aria-label="Site Footer" class="bg-white">
@@ -274,5 +275,5 @@
 
   </section>
 </body>
-
+<script src="<?=URLROOT ?> /js/main.js"> </script>
 </html>
