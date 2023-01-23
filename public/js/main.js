@@ -40,7 +40,6 @@ const items = document.querySelectorAll(".PNames");
 searchInput.addEventListener("input", (e) => {
        let itemshidden = 0;
     const value = e.target.value;
-    console.log(value);
 
     for (let i = 0; i < Names.length; i++) {  
         //for showing all items 
