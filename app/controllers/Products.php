@@ -13,20 +13,22 @@
         }
 
         public function add(){
+            
             if($_SERVER['REQUEST_METHOD']=='POST'){
                 $count =count($_POST['name']);
-                for ($i=0; $i <$count ; $i++) { 
-                  
+                for ($i=0; $i <$count ; $i++) {
+                // sanitize post data
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 
                 $imgName = $_FILES['image']['name'];
                 $imgTmp = $_FILES['image']['tmp_name'];
                 move_uploaded_file($imgTmp, 'img/upload/' . $imgName);
                 $data=[
-                    'name' => $_POST['name'],
-                    'image' => $imgName,
-                    'price' => $_POST['price'],
-                    'quantity' => $_POST['quantity'],
-                    'description' => $_POST['description'],
+                    'name' => $_POST['name'][$i],
+                    'image' => $imgName[$i],
+                    'price' => $_POST['price'][$i],
+                    'quantity' => $_POST['quantity'][$i],
+                    'description' => $_POST['description'][$i],
                     'name_err' => '',
                     'image_err' => '',
                     'price_err' => '',
