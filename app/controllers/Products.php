@@ -28,6 +28,7 @@
                     'quantity_err' => '',
                     'description_err' => ''
                 ];
+                die($data);
                 if(empty($data['name'])){
                     $data['name_err']='Please enter name';
                 }
@@ -44,6 +45,7 @@
                     $data['description_err']='Please enter description';
                 }
                 if(empty($data['name_err']) && empty($data['image_err']) && empty($data['price_err']) && empty($data['quantity_err']) && empty($data['description_err'])){
+                    die('Added');
                     if($this->productmodels->Add($data)){
                         redirect('Products/dashboard');
                     }
