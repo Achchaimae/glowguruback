@@ -20,12 +20,12 @@
                 // sanitize post data
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 
-                $imgName = $_FILES['image']['name'];
-                $imgTmp = $_FILES['image']['tmp_name'];
+                $imgName = $_FILES['image']['name'][$i];
+                $imgTmp = $_FILES['image']['tmp_name'][$i];
                 move_uploaded_file($imgTmp, 'img/upload/' . $imgName);
                 $data=[
                     'name' => $_POST['name'][$i],
-                    'image' => $imgName[$i],
+                    'image' => $imgName,
                     'price' => $_POST['price'][$i],
                     'quantity' => $_POST['quantity'][$i],
                     'description' => $_POST['description'][$i],
