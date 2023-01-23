@@ -11,8 +11,13 @@
             ];
             $this->view('pages/dashboard',$data);
         }
+
         public function add(){
             if($_SERVER['REQUEST_METHOD']=='POST'){
+                $count =count($_POST['name']);
+                for ($i=0; $i <$count ; $i++) { 
+                  
+                
                 $imgName = $_FILES['image']['name'];
                 $imgTmp = $_FILES['image']['tmp_name'];
                 move_uploaded_file($imgTmp, 'img/upload/' . $imgName);
@@ -27,8 +32,9 @@
                     'price_err' => '',
                     'quantity_err' => '',
                     'description_err' => ''
+                    
                 ];
-                die($data);
+                
                 if(empty($data['name'])){
                     $data['name_err']='Please enter name';
                 }
@@ -45,7 +51,6 @@
                     $data['description_err']='Please enter description';
                 }
                 if(empty($data['name_err']) && empty($data['image_err']) && empty($data['price_err']) && empty($data['quantity_err']) && empty($data['description_err'])){
-                    die('Added');
                     if($this->productmodels->Add($data)){
                         redirect('Products/dashboard');
                     }
@@ -56,6 +61,7 @@
                 else{
                     $this->view('inc/itemform',$data);
                 }
+            }
             }
             else {
                 // Load form (page page before the submit)
