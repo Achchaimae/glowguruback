@@ -48,7 +48,7 @@
                 </button>
             </div>
         </section>
-        <section class="flex flex-row m-4 justify-around">
+        <section class="flex flex-row m-4 justify-around flex-wrap">
             <div>
                 <div class=" text-9xl text-[#FF4BE2] font-['Monoton'] m-5">
                     GET Your <br>
@@ -70,9 +70,9 @@
                 Our Products
             </div class="flex flex-row">
             <!-- all top product -->
-            <div class="flex flex-row  justify-around ">
+            <div class="flex flex-row  justify-around flex-wrap">
                 <!-- one product -->
-                <div class="containerj flex justify-center w-3/12 hover:cursor-pointer ">
+                <div class="containerj flex justify-center w-3/12 max-sm:w-full  hover:cursor-pointer ">
                     <div class="max-w-sm py-4">
                         <div class="bg-white shadow-lg hover:shadow-xl transition duration-500 rounded-lg group">
                             <div class="relative">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <!-- one product -->
-                <div class="containerj flex justify-center w-3/12 hover:cursor-pointer ">
+                <div class="containerj flex justify-center max-sm:w-full  max-sm:w-full w-3/12 hover:cursor-pointer ">
                     <div class="max-w-sm py-4">
                         <div class="bg-white shadow-lg hover:shadow-xl transition duration-500 rounded-lg group">
                             <div class="relative">
@@ -105,30 +105,28 @@
                         </div>
                     </div>
                 </div>
-                <!-- one product -->
-                <div class="containerj flex justify-center w-3/12 hover:cursor-pointer ">
-                    <div class="max-w-sm my-4">
+                <div class="containerj flex justify-center w-3/12 max-sm:w-full  hover:cursor-pointer ">
+                    <div class="max-w-sm py-4">
                         <div class="bg-white shadow-lg hover:shadow-xl transition duration-500 rounded-lg group">
                             <div class="relative">
-                                <img class="rounded-t-lg " src="<?= URLROOT; ?>/img/products/p3.png" alt="" />
-                                <div class="absolute inset-0 grid place-content-center  bg-black  bg-opacity-25 h-full w-full opacity-0 group-hover:opacity-100 transition duration-300">
+                                <img class="rounded-t-lg " src="<?= URLROOT; ?>/img/products/p1.png" alt="" />
+                                <div class="absolute inset-0 grid place-content-center  bg-black bg-opacity-25 h-full w-full opacity-0 group-hover:opacity-100 transition duration-300">
                                     <a class="mt-6 py-2 px-4 bg-cyan-700   text-white font-bold rounded-lg shadow-md  hover:shadow-lg " href="<?= URLROOT; ?>/pages/product">Discover</a>
                                 </div>
                             </div>
-                            <div class="py-6 px-8 rounded-lg bg-white">
+                            <div class=" py-6 px-8 rounded-lg bg-white">
                                 <h1 class="text-wh font-bold text-2xl mb-3 hover:text-gray-900 hover:cursor-pointer">lorem ipsum</h1>
                                 <p class="text-gray-700 tracking-wide text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, labore. Ea debitis beatae sequi deleniti.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <section>
             <div class="text-4xl text-center font-['Lily_Script_One']">
                 Our Blogs
             </div>
-            <div class="flex flex-row justify-around">
+            <div class="flex flex-row justify-around flex-wrap">
                 <div class="w-96">
                     <!-- component -->
                     <div class="mx-auto px-4 py-8 max-w-xl my-4">

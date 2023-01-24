@@ -86,7 +86,7 @@
     <footer aria-label="Site Footer" class="bg-white">
       <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-          <div>
+          <div class="h-full w-full object-cover object-center" >
             <img src="<?php echo URLROOT; ?>/img/logo.png" alt="logo">
           </div>
 

@@ -177,7 +177,10 @@
                     </button>
 
                     <!-- Search Input -->
-                    <div class="flex justify-center  mt-2 mr-4">
+                    <div>
+                        
+                    </div>
+                    <!-- <div class="flex justify-center  mt-2 mr-4">
                         <div class="relative flex w-full flex-wrap items-stretch mb-3">
                             <input type="search" placeholder="Search" {{ $attributes }} class="form-input px-3 py-2 placeholder-gray-400 text-gray-700 relative bg-white rounded-lg text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full pr-10" />
                             <span class="z-10 h-full leading-snug font-normal  text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
@@ -186,9 +189,9 @@
                                 </svg>
                             </span>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <ul class="flex items-center flex-shrink-0 space-x-6">
+                    <ul class="flex items-center flex-shrink-0 space-x-6 flex-end ">
 
                         <!-- Notifications menu -->
                         <li class="relative">
