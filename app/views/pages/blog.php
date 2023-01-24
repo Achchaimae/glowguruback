@@ -22,93 +22,69 @@
     <title>Blog</title>
 
 <body class="bg-cyan-100">
-    <section class="flex flex-row justify-between m-4 sticky">
+    <section class="flex flex-row justify-between m-4 sticky ms:w-[50%] ">
         <div class="my-2">
             <img src="<?= URLROOT; ?>/img/logo.png" alt="logo" class=" w-24">
         </div>
-        <div class="bg-white flex flex-row w-fit px-4  py-2 justify-between rounded-3xl gap-4 text-center">
-            <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl text-">
-                <a href="<?= URLROOT ?>/pages/index">Home</a>
+        <div class="bg-white flex flex-row w-fit ms:px-4 h-fit py-2 justify-between rounded-3xl gap-4 text-center px-1">
+            <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl h-fit">
+                <a href="<?= URLROOT; ?>/pages/index">Home</a>
             </div>
-            <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
+            <div class=" hover:bg-cyan-100 px-4 w-24 ms:h-10 py-2 rounded-3xl ms:px-2 h-fit">
                 About
             </div>
-            <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
-                <a href="<?= URLROOT ?>/pages/product">Products</a>
+            <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl h-fit">
+                <a href="<?= URLROOT; ?>/pages/product">Products</a>
             </div>
-            <div class=" bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
-                <a href="<?= URLROOT ?>/pages/product">Blog</a>
+            <div class=" bg-cyan-100 px-4 w-24 py-2 rounded-3xl h-fit">
+                <a href=" <?= URLROOT; ?>/pages/blog"> Blog</a>
             </div>
         </div>
-        <div class="bg-white  p-2 rounded-full">
-            <button class="bg-cyan-100  p-2 rounded-full">
-                &nbsp;<a href="<?= URLROOT; ?>/autho/login"> <i class="fa-solid fa-user text-cyan-700"></i></a>&nbsp;
+        <div class="bg-white  p-2 rounded-full w-max">
+            <button class="bg-cyan-100  p-2 rounded-full w-max">
+                &nbsp;<a href="<?= URLROOT; ?>/autho/login" class=""> <i class="fa-solid fa-user text-cyan-700"></i></a>&nbsp;
             </button>
         </div>
     </section>
     <section class=" bg-white m-4 rounded-lg">
-            <div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-                <a rel="noopener noreferrer" href="#" class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 ">
-                    <img src="<?= URLROOT; ?>/img/blog/b1.png" alt="blog" class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
-                    <div class="p-6 space-y-2 lg:col-span-5">
-                        <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">Noster tincidunt reprimique ad pro</h3>
-                        <span class="text-xs dark:text-gray-400">February 19, 2021</span>
-                        <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert putent doctus id.</p>
+        <div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+            <a rel="noopener noreferrer" href="#" class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 ">
+                <img src="<?= URLROOT; ?>/img/blog/b1.png" alt="blog" class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
+                <div class="p-6 space-y-2 lg:col-span-5">
+                    <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">Noster tincidunt reprimique ad pro</h3>
+                    <span class="text-xs dark:text-gray-400">February 19, 2021</span>
+                    <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert putent doctus id.</p>
+                </div>
+            </a>
+            <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline ">
+                    <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="<?= URLROOT; ?>/img/blog/b2.png">
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
+                        <span class="text-xs dark:text-gray-400">January 21, 2021</span>
+                        <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
                     </div>
                 </a>
-                <div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline ">
-                        <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="<?= URLROOT; ?>/img/blog/b2.png">
-                        <div class="p-6 space-y-2">
-                            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span class="text-xs dark:text-gray-400">January 21, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-                        </div>
-                    </a>
-                    <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline ">
-                        <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="<?= URLROOT; ?>/img/blog/b3.png">
-                        <div class="p-6 space-y-2">
-                            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span class="text-xs dark:text-gray-400">January 22, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-                        </div>
-                    </a>
-                    <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline ">
-                        <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="<?= URLROOT; ?>/img/blog/b4.png">
-                        <div class="p-6 space-y-2">
-                            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span class="text-xs dark:text-gray-400">January 23, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-                        </div>
-                    </a>
-                    <!-- <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
-                        <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?4">
-                        <div class="p-6 space-y-2">
-                            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span class="text-xs dark:text-gray-400">January 24, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-                        </div>
-                    </a> -->
-                    <!-- <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
-                        <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?5">
-                        <div class="p-6 space-y-2">
-                            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span class="text-xs dark:text-gray-400">January 25, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-                        </div>
-                    </a>
-                    <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900 hidden sm:block">
-                        <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?6">
-                        <div class="p-6 space-y-2">
-                            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span class="text-xs dark:text-gray-400">January 26, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-                        </div>
-                    </a> -->
-                </div>
-
+                <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline ">
+                    <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="<?= URLROOT; ?>/img/blog/b3.png">
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
+                        <span class="text-xs dark:text-gray-400">January 22, 2021</span>
+                        <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+                    </div>
+                </a>
+                <a rel="noopener noreferrer" href="#" class="max-w-sm mx-auto group hover:no-underline focus:no-underline ">
+                    <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="<?= URLROOT; ?>/img/blog/b4.png">
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
+                        <span class="text-xs dark:text-gray-400">January 23, 2021</span>
+                        <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+                    </div>
+                </a>
             </div>
-        
+
+        </div>
+
     </section>
     <!-- footer section -->
     <section class="mt-4">

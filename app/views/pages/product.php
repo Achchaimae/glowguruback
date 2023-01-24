@@ -23,29 +23,27 @@
 </head>
 
 <body class="bg-cyan-100 overflow-x-hidden">
-  <section class="flex flex-row justify-between m-4 sticky">
+  <section class="flex flex-row justify-between m-4 sticky ms:w-[50%] ">
     <div class="my-2">
       <img src="<?= URLROOT; ?>/img/logo.png" alt="logo" class=" w-24">
     </div>
-    <div class="bg-white flex flex-row w-fit px-4  py-2 justify-between rounded-3xl gap-4 text-center">
-      <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl text-">
+    <div class="bg-white flex flex-row w-fit ms:px-4 h-fit py-2 justify-between rounded-3xl gap-4 text-center px-1">
+      <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl h-fit">
         <a href="<?= URLROOT; ?>/pages/index">Home</a>
       </div>
-      <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
+      <div class=" hover:bg-cyan-100 px-4 w-24 ms:h-10 py-2 rounded-3xl ms:px-2 h-fit">
         About
       </div>
-      <div class=" bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
-        <a href="">Products</a>
+      <div class=" bg-cyan-100 px-4 w-24 py-2 rounded-3xl h-fit">
+        <a href="<?= URLROOT; ?>/pages/product">Products</a>
       </div>
-      <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl ">
-        <a href="<?= URLROOT ; ?>/pages/blog">
-          Blog
-        </a>
+      <div class=" hover:bg-cyan-100 px-4 w-24 py-2 rounded-3xl h-fit">
+        <a href=" <?= URLROOT; ?>/pages/blog"> Blog</a>
       </div>
     </div>
-    <div class="bg-white  p-2 rounded-full">
-      <button class="bg-cyan-100  p-2 rounded-full">
-        &nbsp;<a href="<?= URLROOT; ?>/autho/login"> <i class="fa-solid fa-user text-cyan-700"></i></a>&nbsp;
+    <div class="bg-white  p-2 rounded-full w-max">
+      <button class="bg-cyan-100  p-2 rounded-full w-max">
+        &nbsp;<a href="<?= URLROOT; ?>/autho/login" class=""> <i class="fa-solid fa-user text-cyan-700"></i></a>&nbsp;
       </button>
     </div>
   </section>
@@ -53,7 +51,7 @@
     <!-- search bar -->
     <div class="relative text-gray-600">
       <input type="search" name="search" placeholder="Search" data-search id="search" class=" bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none w-[80%]">
-      <button type="submit" class="relative right-12 top-0 mt-3 mr-4  " >
+      <button type="submit" class="relative right-12 top-0 mt-3 mr-4  ">
         <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
           <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
         </svg>
@@ -64,10 +62,10 @@
     <?php foreach ($data['products'] as $product) : ?>
       <div class="Names flex w-72 h-72">
         <div class="container mx-auto  p-5 bg-white max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-        <div class="h-44">
-          
-          <img class="rounded-xl w-full h-44 "src="<?= URLROOT . '/img/upload/' . $product->image; ?>" alt="" />
-        </div>  
+          <div class="h-44">
+
+            <img class="rounded-xl w-full h-44 " src="<?= URLROOT . '/img/upload/' . $product->image; ?>" alt="" />
+          </div>
           <div class="flex justify-between items-center">
             <div>
               <h1 class=" PNames mt-5 text-xl font-semibold"><?php echo $product->name; ?></h1>
@@ -86,7 +84,7 @@
     <footer aria-label="Site Footer" class="bg-white">
       <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-          <div class="h-full w-full object-cover object-center" >
+          <div class="h-full w-full object-cover object-center">
             <img src="<?php echo URLROOT; ?>/img/logo.png" alt="logo">
           </div>
 
@@ -275,5 +273,6 @@
 
   </section>
 </body>
-<script src="<?=URLROOT ?> /js/main.js"> </script>
+<script src="<?= URLROOT ?> /js/main.js"> </script>
+
 </html>
