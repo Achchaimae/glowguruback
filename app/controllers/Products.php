@@ -15,57 +15,35 @@
         public function add(){
             
             if($_SERVER['REQUEST_METHOD']=='POST'){
+
                 $count =count($_POST['name']);
+                
                 for ($i=0; $i <$count ; $i++) {
-                // sanitize post data
-                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-                
-                $imgName = $_FILES['image']['name'][$i];
-                $imgTmp = $_FILES['image']['tmp_name'][$i];
-                move_uploaded_file($imgTmp, 'img/upload/' . $imgName);
-                $data=[
-                    'name' => $_POST['name'][$i],
-                    'image' => $imgName,
-                    'price' => $_POST['price'][$i],
-                    'quantity' => $_POST['quantity'][$i],
-                    'description' => $_POST['description'][$i],
-                    'name_err' => '',
-                    'image_err' => '',
-                    'price_err' => '',
-                    'quantity_err' => '',
-                    'description_err' => ''
+                    // sanitize post data
+                    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                     
-                ];
-                
-                if(empty($data['name'])){
-                    $data['name_err']='Please enter name';
-                }
-                if(empty($data['image'])){
-                    $data['image_err']='Please enter image';
-                }
-                if(empty($data['price'])){
-                    $data['price_err']='Please enter price';
-                }
-                if(empty($data['quantity'])){
-                    $data['quantity_err']='Please enter quantity';
-                }
-                if(empty($data['description'])){
-                    $data['description_err']='Please enter description';
-                }
-                if(empty($data['name_err']) && empty($data['image_err']) && empty($data['price_err']) && empty($data['quantity_err']) && empty($data['description_err'])){
-                    if($this->productmodels->Add($data)){
+                    $imgName = $_FILES['image']['name'][$i];
+                    $imgTmp = $_FILES['image']['tmp_name'][$i];
+                    move_uploaded_file($imgTmp, 'img/upload/' . $imgName);
+                    $data=[
+                        'name' => $_POST['name'][$i],
+                        'image' => $imgName,
+                        'price' => $_POST['price'][$i],
+                        'quantity' => $_POST['quantity'][$i],
+                        'description' => $_POST['description'][$i],
+                        
+                    ];
+
+                    $test = $this->productmodels->Add($data);
+                    
+                    if($test){
                         redirect('Products/dashboard');
                     }
                     else{
                         die('Something went wrong');
                     }
                 }
-                else{
-                    $this->view('inc/itemform',$data);
-                }
-            }
-            }
-            else {
+            } else {
                 // Load form (page page before the submit)
                 $data=[
                     'name' => '',
